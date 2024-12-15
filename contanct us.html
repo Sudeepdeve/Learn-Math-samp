@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title> Sqc Team </title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: #cbc9e8;
+}
+
+header {
+    width: 100%;
+    background-color: #43346d;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.wrapper .title{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.title h4{
+    display: inline-block;
+    padding: 20px;
+    color: #585757;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    word-spacing: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    text-transform: uppercase;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+}
+
+.wrapper .card_Container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.card_Container .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 1),
+                inset 0 0 0 1000px rgba(67, 52, 109, .6);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .imbBx, .imbBx img{
+    width: 100%;
+    height: 100%;
+}
+
+.card .content{
+    position: absolute;
+    bottom: -160px;
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: bottom 0.5s;
+    transition-delay: 0.65s;
+}
+
+.card:hover .content{
+    bottom: 0;
+    transition-delay: 0s;
+}
+
+.content .contentBx h3{
+    text-transform: uppercase;
+    color: #000000;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 15px;
+    line-height: 1.1em;
+    transition: 0.5s;
+    transition-delay: 0.6s;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.card:hover .content .contentBx h3{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content .contentBx h3 span{
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: initial;
+}
+
+.content .sci{
+    position: relative;
+    bottom: 10px;
+    display: flex;
+}
+
+.content .sci li{
+    list-style: none;
+    margin: 0 10px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    opacity: 0;
+    transition-delay: calc(0.2s * var(--i));
+}
+
+.card:hover .content .sci li{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.content .sci li a{
+    color: #fff;
+    font-size: 24px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to contact us Page</h1>
+    </header>
+
+    <!-- ----------------------nav bar------------------------ -->
+    <ul class="nav nav-tabs text-bg-dark nav-fill" >
+        <li class="nav-item ">
+            <a class="nav-link text-unselected" aria-current="page" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-unselected" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">CLASSES</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="class6.html">CLASS 6</a></li>
+                <li><a class="dropdown-item" href="class7.html">CLASS 7</a></li>
+                <li><a class="dropdown-item" href="class8.html">CLASS 8</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="class9.html">CLASS 9</a></li>
+            </ul>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link active text-unselected" href="About page.html">ABOUT US</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link text-unselected" href="quiz.html">MATH Quiz</a>
+        </li>
+
+        <li class="nav-item ">
+            <a class="nav-link text-unselected" href="contanct us.html">CONTACT US</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link text-unselected active" href="reviews.html">REVIEWS</a>
+        </li>
+    </ul>
+    <!-- --------------------------/nav bar/----------------------- -->
+
+    <div class="wrapper">
+
+        <div class="title">
+            <h4>Our Mentors</h4>
+        </div>
+
+        <div class="card_Container">
+            
+
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="ghanashyam poudel.jpg" alt="" class="img">
+                </div>
+
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Ghanshyam Sharma Poudel  <br><span></span></h3>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                      
+                        <li style="--i: 3">
+                            <a href="
+                            https://www.facebook.com/gspoudyal"><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="jayaram kayastha.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Jayaram Kayastha   <br><span></span></h3>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                       
+                        <li style="--i: 3">
+                            <a href="
+                            https://www.facebook.com/trulykayastha"><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+<div class="card_Container">
+    <div class="card">
+
+        <div class="imbBx">
+            <img src="pbk dada sir.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <div class="contentBx">
+                <h3>Purna bahadur kshteri  <br></h3>
+              
+            </div>
+            <ul class="sci">
+                <li style="--i: 1">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li style="--i: 2">
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                </li>
+                <li style="--i: 3">
+                    <a href=""><i class="https://www.facebook.com/purna.kshetri.3"></i></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    
+        <br><br>
+<!-- Put the images of the members -->
+        <div class="card_Container">
+
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="ramji parshad devkota.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Ramji Parsad devkota   <br><span></span></h3>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                      
+                        <li style="--i: 3">
+                            <a href="#"><i class="https://www.facebook.com/ramji.deevkota
+
+                                "></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="raju subedi" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Raju Subedi </h3>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                       
+                        <li style="--i: 3">
+                            <a href="#"><i class="https://www.facebook.com/raju.subedi.56863
+                                "></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+<div class="card_Container">
+    <div class="card">
+
+        <div class="imbBx">
+            <img src="sishir devkota.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <div class="contentBx">
+                <h3>Shishir Devkota </span></h3>
+              
+            </div>
+            <ul class="sci">
+                <li style="--i: 1">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li style="--i: 2">
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                </li>
+                <li style="--i: 3">
+                    <a href=""><i class="https://www.facebook.com/devkotashishir
+                        "></i></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    </div>
+    
+<div class="card_Container">
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="bharat subedi.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="contentBx">
+                        <h3> Bharat Parsad Subedi   </h3>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        
+                        <li style="--i: 3">
+                            <a href="#"><i class="https://www.facebook.com/raju.subedi.56863
+                                "></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="sandesh poudel.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Sandesh Poudel  <br><span></span></h3>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                       
+                        <li style="--i: 3">
+                            <a href="#"><i class="https://www.facebook.com/sandesh.poudel.90857
+                                "></i></a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                </div>
+                
+
+                <div class="card_Container">
+                    <div class="card">
+        
+                        <div class="imbBx">
+                            <img src="partap poudel.jpg" alt="">
+                        </div>
+        
+                        <div class="content">
+                            <div class="contentBx">
+                                <h3>Pratap Poudel </span></h3>
+                            </div>
+                            <ul class="sci">
+                                <li style="--i: 1">
+                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                </li>
+                                
+                                <li style="--i: 3">
+                                    <a href="#"><i class="https://www.facebook.com/pratap.poudel.16
+                                        "></i></a>
+                                </li>
+                            </ul>
+                        </div>
+        
+                    </div>
+        
+        <!-- Add other cards as needed -->
+
+    </div>
+</body>
+</html>
