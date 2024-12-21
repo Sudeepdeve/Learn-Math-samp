@@ -26,7 +26,7 @@
     
 
     
-        <base href="https://jeopardylabs.com" />
+   
         
             <style type="text/css">
             /*!
@@ -846,7 +846,41 @@ kbd
 .cell-inner p:last-child {
     margin-bottom:0;
 }
+.sourceCodeLink{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 54px;
+    overflow: hidden;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 6px 8px;
+    border-radius: 55px;
+    transition: .2s;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
+.sourceCodeLink img{
+    width: 55px;
+    border-radius: 50%;
+}
+
+.sourceCodeLink p{
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    margin: 0;
+    margin-left: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.sourceCodeLink:hover{
+    width: 222px;
+}
 #grid {
     transition:opacity 1s;
 }
@@ -2877,7 +2911,7 @@ function mini(){
                         
                             <div class="cell points" >
                                 <div class="cell-inner" data-category="Probability / Indices">400</div>
-                                <div class="front answer" tabindex="0"><p>(x<sup>a</sup>)/x<sup>b</sup> in terms of indices&nbsp;</p></div>
+                                <div class="front answer" tabindex="0"><p>(x<sup>a</sup>)/(x)<sup>b</sup> in terms of indices&nbsp;</p></div>
                                 <div class="back question" tabindex="0"><p>x<sup>a-b</sup></p></div>
                             </div>
                         
@@ -3117,12 +3151,11 @@ function mini(){
         Use the up/down arrow to add or remove points from the highlighted team. Then press <kbd>ESC</kbd>
     </div>-->
 
+  
 
-
-
-    
-
-
-
+    <a class="sourceCodeLink" href="congra.html" target="_blank">
+        <img src="./srcImages/github.png" alt="">
+        <p>For You</p>
+    </a>
 </body>
 </html>
