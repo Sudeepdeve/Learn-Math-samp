@@ -1,145 +1,121 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game types Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Types Of Game</title>
+  <link rel="stylesheet" href="style1.css">
 
-        .container {
-            width: 80%;
-            max-width: 800px;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 20px;
-        }
+  <!-- Back to Home button -->
+  <button onclick="window.location.href = 'index.html';" class="back-to-home">Back to Home</button>
 
-        .toggle {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
+  <style>
+    /* Basic styling for back button */
+    .back-to-home {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      width: 200px;
+      height: 50px; /* Adjusted the height for better visibility */
+      text-align: center;
+    }
 
-        .toggle button {
-            flex: 1;
-            margin: 0 10px;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007BFF;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+    .back-to-home:hover {
+      background-color: #0056b3;
+    }
 
-        .toggle button:hover {
-            background-color: #0056b3;
-        }
+    .container {
+      display: flex;
+      flex-direction: Stack the boxes vertically */
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
 
-        .box {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            text-align: center;
-        }
+    .box {
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      width: 80%;
+      max-width: 600px;
+      padding: 20px;
+      position: relative; /* For absolute positioning of the button */
+    }
 
-        .box a {
-            color: #007BFF;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .box h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
 
-        .box a:hover {
-            text-decoration: underline;
-        }
+    .box h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
 
-        .description {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #555;
-        }
-    </style>
-    <script>
-        function toggleBox(boxId) {
-            document.querySelectorAll('.box').forEach(box => box.style.display = 'none');
-            document.getElementById(boxId).style.display = 'block';
-        }
-  
-    </script>
+    .box p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .box button {
+      padding: 12px 24px; /* Larger padding for better visibility */
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      position: absolute; /* Position the button at the bottom */
+      bottom: 20px; /* Space from the bottom of the box */
+      left: 50%;
+      transform: translateX(-50%); /* Center the button */
+      opacity: 1; /* Ensure the button is always visible */
+      transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition effect */
+    }
+
+    .box button:hover {
+      background-color: #218838;
+      transform: translateX(-50%) scale(1.1); /* Slightly enlarge on hover */
+    }
+  </style>
 </head>
 <body>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <!-- ----------------------nav bar------------------------ -->
- <ul class="nav nav-tabs text-bg-dark nav-fill" >
-    <li class="nav-item ">
-        <a class="nav-link text-unselected" aria-current="page" href="index.html">HOME</a>
-      </li>
-      <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-unselected" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">CLASSES</a>
-          <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="class6.html">CLASS 6</a></li>
-              <li><a class="dropdown-item" href="class7.html">CLASS 7</a></li>
-              <li><a class="dropdown-item" href="class8.html">CLASS 8</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="class9.html">CLASS 9</a></li>
-          </ul>
-      </li>
-      <li class="nav-item ">
-          <a class="nav-link active text-unselected" href="About page.html">ABOUT US</a>
-      </li>
-      <li class="nav-item ">
-          <a class="nav-link text-unselected" href="quiz.html">MATH Quiz</a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link text-unselected" href="gamequiz.html">Math Games</a>
-    </li>
-
-      <li class="nav-item ">
-          <a class="nav-link text-unselected" href="contanct us.html">CONTACT US</a>
-      </li>
-      
-      <li class="nav-item ">
-        <a class="nav-link text-unselected active" href="reviews.html">REVIEWS</a>
-    </li>
-  </ul>
-    <div class="container">
-        <div class="toggle">
-            <button onclick="toggleBox('box1')">General Math Quiz</button>
-            <button onclick="toggleBox('box2')">Formula Math Quiz</button>
-            <button onclick="toggleBox('box3')">Shoot the Answers</button>
-        </div>
-
-        <div id="box1" class="box">
-            <p>Enter to Begin the General Math Quiz</p>
-            <a href="Play 1.html" target="_blank">Start the Game</a>
-        </div>
-
-        <div id="box2" class="box">
-            <p>Enter to Begin the Formula  Math Quiz</p>
-            <a href="Play 2.html" target="_blank">Start the Game</a>
-        </div>
-        <div id="box3" class="box">
-            <p>Enter to Begin the Wonderful  game of Mathematics </p>
-            <a href="https://mathexibitionsamp.netlify.app/" target="_blank">Start the Game</a>
-        </div>
-
-        <div class="description">
-           You can choose two types of quiz by your choice with the no of teams you want.
-        </div>
+  <div class="container">
+    <div class="box">
+      <h2>1</h2>
+      <h3>General math game </h3>
+      <p>The General math game page on the Learn Math website offers an engaging math quiz experience. It challenges users with questions designed to test their general math knowledge. The interactive interface encourages users to solve problems, making learning enjoyable and effective. Perfect for enhancing math skills through practice.</p>
+      <button onclick="window.location.href = 'play1.html';">Start The Game</button>
     </div>
+    <div class="box">
+      <h2>2</h2>
+      <h3>Formula based game </h3>
+      <p>The Formula based game page on the Learn Math website features a math quiz focused on formulas. It presents users with questions that test their understanding of various mathematical formulas, helping to reinforce concepts. The interactive format makes learning fun, promoting deeper engagement with math topics and boosting retention       </p>
+      <button onclick="window.location.href = 'play2.html';">Start The Game</button>
+    </div>
+    <div class="box">
+      <h2>3</h2>
+      <h3>Shoting Game </h3>
+      <p> The Shoting Game is an interactive math challenge designed to make learning fun. It combines educational gameplay with problem-solving, where users answer math questions to progress. The game offers a dynamic experience, encouraging players to apply their math skills in a competitive and engaging environment.
+      </p>
+      <button onclick="window.location.href = 'https://mathexibitionsamp.netlify.app/';">Start The Game</button>
+    </div>
+
+   
+
+    <!-- Add some space here -->
+    <div style="margin-top: 50px;"></div>
+  </div>
+
 </body>
 </html>
